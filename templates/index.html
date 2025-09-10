@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>My Photo Gallery</h1>
+        <a href="/upload" class="btn btn-primary">Upload Photo</a>
+    </header>
+    <main>
+        {% if photos %}
+            <div class="gallery">
+                {% for photo in photos %}
+                    <div class="photo-card">
+                        <img src="{{ photo.image_url }}" alt="{{ photo.title }}">
+                        <h3>{{ photo.title }}</h3>
+                        <form action="/delete/{{ photo.id }}" method="post">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No photos uploaded yet.</p>
+        {% endif %}
+    </main>
+</body>
+</html>

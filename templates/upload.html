@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Photo</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Upload a Photo</h1>
+        <a href="/" class="btn btn-secondary">Back to Gallery</a>
+    </header>
+    <main>
+        <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+            <label for="title">Photo Title:</label>
+            <input type="text" name="title" id="title" required>
+
+            <label for="file">Select Photo:</label>
+            <input type="file" name="file" id="file" accept="image/*" required>
+
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </main>
+</body>
+</html>
