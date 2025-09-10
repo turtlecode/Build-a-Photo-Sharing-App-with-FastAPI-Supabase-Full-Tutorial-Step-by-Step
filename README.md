@@ -9,9 +9,13 @@ You can upload photos, display them in a gallery, and delete them when needed.
 ✨ Features:
 
 🔸 Upload photos with a title
+
 🔸 Store images in Supabase Storage
+
 🔸 Save metadata (title, image URL, created time) in a Supabase table
+
 🔸 Display all photos in a clean gallery layout
+
 🔸 Delete photos from both the database and storage
 
 💻 Tech Stack:
